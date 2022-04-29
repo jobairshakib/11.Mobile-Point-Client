@@ -1,9 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './Components/Shared/Header/Header';
 
 function App() {
-  return (
+  return(
     <div>
-      <h1>Hello World</h1>
+      <Header></Header>
+      <Routes>
+        {/* <Route path='/'></Route> */}
+      </Routes>
     </div>
   );
 }
