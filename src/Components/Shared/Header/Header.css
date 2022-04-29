@@ -79,6 +79,35 @@ nav{
     width: 100%;
 }
 
+.signout-btn{
+    border: none;
+    background: #fff;
+    position: relative;
+    text-decoration: none;
+    color: #32373b;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+.signout-btn:after{
+    content: "";
+    position: absolute;
+    background-color: #16a085;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.signout-btn:hover{
+    color: #000;
+}
+.signout-btn:hover:after{
+    width: 100%;
+}
+
 
 /* Responsive
  */
