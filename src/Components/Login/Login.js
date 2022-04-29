@@ -49,11 +49,12 @@ const Login = () => {
     }
 
     const resetPassword = async () => {
-        if (!user) {
-            toast('Please Enter Your Email');
+        if (user) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
         }
-        await sendPasswordResetEmail(email);
-        toast('Sent email');
+        toast('Please enter your Email');
+        
     }
     return (
         <div className='register-form'>

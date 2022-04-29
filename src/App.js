@@ -7,6 +7,7 @@ import Login from './Components/Login/Login';
 import MangeItems from './Components/ManageItems/MangeItems';
 import MyItems from './Components/MyItems/MyItems';
 import Register from './Components/Register/Register';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Header from './Components/Shared/Header/Header';
 
 function App() {
@@ -17,9 +18,21 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/manageitems' element={<MangeItems></MangeItems>}></Route>
-        <Route path='/additem' element={<AddItem></AddItem>}></Route>
-        <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+        <Route path='/manageitems' element={
+          <RequireAuth>
+            <MangeItems></MangeItems>
+          </RequireAuth>
+        }></Route>
+        <Route path='/additem' element={
+          <RequireAuth>
+            <AddItem></AddItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
