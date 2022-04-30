@@ -23,13 +23,13 @@ const Header = () => {
                 </div>
                 <div className='link-container'>
                     <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/blog'>Blog</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/manageItems'>Manage Items</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/manageInventories'>Manage Inventories</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/addItem'>Add Item</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/myItems'>My Items</NavLink>
                     
                     {
                         user ?
-                            <button className='signout-btn' onClick={handleSignOut}>SIGN OUT</button>
+                            <button className='signout-btn' onClick={handleSignOut}>Sign Out</button>
                             :
                             <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/login'>Login</NavLink>
                     }

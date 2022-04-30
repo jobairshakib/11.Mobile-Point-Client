@@ -1,0 +1,58 @@
+[
+    {
+        "name":"Samsung Galaxy M40",
+        "image":"https://i.ibb.co/Wxwx018/m40.png",
+        "shortDescription": "Samsung Galaxy M40 comes with a punch-hole front camera which is one of its main attractions. You can argue that the pop-up camera technology is more advanced and practical than the punch-hole design. We do agree with it. However, the punch-hole design is more uncommon and it is a great deal for the cost. The back side has a glossy finish and unique gradient style. Altogether, it gives a quite premium kind of first impression.",
+        "price":"BDT. 22,490",
+        "quantity":20,
+        "supplierName":"Butterfly Group"
+    },
+    {
+        "name": "Samsung Galaxy M51",
+        "image": "https://i.ibb.co/ygVtwm9/m51.png",
+        "shortDescription": "Samsung Galaxy M51 comes with 6.7 inches Full HD+ Super AMOLED screen. It has a punch-hole front camera design. The back camera is of quad 64+12+5+5 with PDAF, ultrawide, depth sensor, dedicated macro camera, LED flash etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy M51 comes with 7000 mAh massive battery with 25W fast charging. It has 8 GB RAM, up to 2.2 GHz octa-core CPU and Adreno 618 GPU. It is powered by Qualcomm Snapdragon 730G (8 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone.",
+        "price": "BDT. 33,999",
+        "quantity": 30,
+        "supplierName": "Electra International"
+    },
+    {
+        "name": "Samsung Galaxy A50",
+        "image": "https://i.ibb.co/c3PdLmd/a50.png",
+        "shortDescription": "Samsung Galaxy A50 comes with 6.4 inches Full HD+ Super AMOLED screen. A third generation Gorilla Glass protects it. It has a Full-View waterdrop notch design. The back camera is of triple 25+8+5 MP with PDAF, ultrawide, depth sensor etc. and Full HD video recording. The front camera is of 25 MP. Samsung Galaxy A50 comes with 4000 mAh battery and 15W fast charging. It has 4 GB RAM, up to 2.3 GHz octa-core CPU and Mali-G72 MP3 GPU. It is powered by Exynos 9610 Octa (10nm) chipset. The device comes with 64 internal storage and dedicated MicroSD slot. There is an in-display fingerprint sensor in this phone..",
+        "price": "BDT. 22,990",
+        "quantity": 30,
+        "supplierName": "Butterfly Group"
+    },
+    {
+        "name": "Samsung Galaxy A52",
+        "image": "https://i.ibb.co/ZH1z1sw/a52.png",
+        "shortDescription": "Samsung Galaxy A52 comes with 6.5 inches Full HD+ Super AMOLED screen. It has a center punch-hole front camera design. The back camera is of Quad 64+12+5+5 with PDAF, OIS, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy A52 comes with 4500 mAh battery with 25W fast charging. It has 8 GB RAM, up to 2.3 GHz octa-core CPU and Adreno 618 GPU. It is powered by a Qualcomm Snapdragon 720G (8 nm) chipset. The device comes with 128 GB internal storage and shared MicroSD slot. There is an in-display optical fingerprint sensor in this phone.",
+        "price": "BDT. 31,999",
+        "quantity": 30,
+        "supplierName": "Electra International"
+    },
+    {
+        "name": "Samsung Galaxy A53 5G",
+        "image": "https://i.ibb.co/s6BSs1S/a53.png",
+        "shortDescription": "Samsung Galaxy A53 5G comes with 6.5 inches Full HD+ Super AMOLED screen. It has a center punch-hole front camera design. The back camera is of Quad 64+12+5+5 with PDAF, OIS, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy A53 5G comes with 5000 mAh battery with 25W fast charging. It has 8 GB RAM, up to 2.4 GHz octa-core CPU and Mali-G68 MP2 GPU. It is powered by a Exynos 1280 (5 nm) chipset. The device comes with 128 or 256 GB internal storage and MicroSD slot. There is an in-display optical fingerprint sensor in this phone.",
+        "price": "BDT. 43,999",
+        "quantity": 30,
+        "supplierName": "Samsung Bangladesh"
+    },
+    {
+        "name": "Samsung Galaxy A71",
+        "image": "https://i.ibb.co/JcfgzM7/a71.png",
+        "shortDescription": "Samsung Galaxy A71 comes with 6.7 inches Full HD+ Super AMOLED screen. It has a punch-hole front camera design. The back camera is of Quad 64+12+12+5 with PDAF, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy A71 comes with 4500 mAh battery with 25W fast charging. It has 6 or 8 GB RAM, up to 2.2 GHz octa-core CPU and Adreno 618 GPU. It is powered by a Qualcomm Snapdragon 730 (8 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is an in-display optical fingerprint sensor in this phone.",
+        "price": "BDT. 34,999",
+        "quantity": 30,
+        "supplierName": "Samsung Bangladesh"
+    },
+    {
+        "name": "Samsung Galaxy A73 5G",
+        "image": "https://i.ibb.co/Gd0jJsZ/a73.png",
+        "shortDescription": "Samsung Galaxy A73 5G comes with 6.7 inches Full HD+ Super AMOLED Plus screen. It has a center punch-hole front camera design. The back camera is of Quad 108+12+5+5 with PDAF, OIS, ultrawide, depth sensor, dedicated macro camera etc. and Ultra HD video recording. The front camera is of 32 MP. Galaxy A73 5G comes with 5000 mAh battery with 25W fast charging. It has 6 or 8 GB RAM, up to 2.4 GHz octa-core CPU and Adreno 642L GPU. It is powered by a Qualcomm Snapdragon 778G 5G (6 nm) chipset. The device comes with 128 or 256 GB internal storage and shared MicroSD slot. There is an in-display optical fingerprint sensor in this phone.",
+        "price": "BDT. 59,499",
+        "quantity": 30,
+        "supplierName": "Samsung Bangladesh"
+    }
+]

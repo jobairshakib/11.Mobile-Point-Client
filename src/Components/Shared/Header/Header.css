@@ -111,7 +111,7 @@ nav{
 
 /* Responsive
  */
-@media only screen and (max-width:399px) {
+@media only screen and (max-width:499px) {
     nav {
         height: 100px;
         padding: .8rem 0;
@@ -128,7 +128,7 @@ nav{
         font-size: .8rem;
     }
 }
-@media only screen and (min-width:400px) and (max-width:767px) {
+@media only screen and (min-width:500px) and (max-width:767px) {
     nav {
         height: 80px;
         padding: .8rem 0;

@@ -3,8 +3,10 @@ import './App.css';
 import AddItem from './Components/AddItem/AddItem';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
+import Items from './Components/Items/Items';
 import Login from './Components/Login/Login';
-import MangeItems from './Components/ManageItems/MangeItems';
+import ManageInventories from './Components/ManageInventories/ManageInventories';
+import ManageItem from './Components/ManageItem/ManageItem';
 import MyItems from './Components/MyItems/MyItems';
 import Register from './Components/Register/Register';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
@@ -17,10 +19,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/manageitems' element={
+        <Route path='/inventory/:id' element={
           <RequireAuth>
-            <MangeItems></MangeItems>
+            <ManageItem></ManageItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/manageinventories' element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
           </RequireAuth>
         }></Route>
         <Route path='/additem' element={

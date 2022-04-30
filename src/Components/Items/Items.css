@@ -1,0 +1,32 @@
+.items-container {
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.items-title {
+    padding: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #16a085;
+}
+
+/* resposnsive */
+@media only screen and (max-width:576px) {
+    .items-container {
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width:577px) and (max-width:992px) {
+    .items-container {
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
