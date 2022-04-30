@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import useItems from '../hooks/useItems';
 import Item from '../Item/Item';
+import './Home.css'
 
 const Home = () => {
     const [items, setItems] = useItems();
@@ -16,8 +17,9 @@ const Home = () => {
                         item={item}
                     ></Item>)
                 }
-                <button><Link to='/manageInventories'>Manage Inventories</Link></button>
+                
             </div>
+            <Link className='text-decoration-none' to='/manageInventories'><button className='inventory-btn' >Manage Inventories</button></Link>
         </div>
     );
 };
