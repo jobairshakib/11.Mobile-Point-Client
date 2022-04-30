@@ -1,11 +1,16 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
+    const date = new Date();
     return (
-        <div>
-            <h1>This Footer</h1>
-        </div>
+        <footer className=' footer text-center mt-5'>
+            <p>Mobile Point</p>
+            <p><small>
+                ©{date.getFullYear()} Mobile Point. All Rights Reserved.
+            </small></p>
+        </footer>
     );
 };
 
-export default Footer;<h1>This Footer</h1>
+export default Footer;

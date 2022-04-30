@@ -10,6 +10,7 @@ import ManageItem from './Components/ManageItem/ManageItem';
 import MyItems from './Components/MyItems/MyItems';
 import Register from './Components/Register/Register';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
+import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const Social = () => {
             </div>
     }
     if (loading) {
-        return <Spinner animation="border" variant="danger" />;
+        return <Spinner animation="border" variant="success" />;
     }
 
     if (user) {

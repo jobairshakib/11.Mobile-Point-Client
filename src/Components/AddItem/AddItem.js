@@ -8,13 +8,14 @@ const AddItem = () => {
         const price = event.target.price.value;
         const shortDescription = event.target.shortDescription.value;
         const quantity = event.target.quantity.value;
-        const img = event.target.img.value;
+        const image = event.target.image.value;
+        const supplierName = event.target.supplierName.value;
 
         const url = `http://localhost:5000/addItem`;
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                name, price, shortDescription, quantity, img
+                name, price, shortDescription, quantity, image, supplierName
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -34,7 +35,8 @@ const AddItem = () => {
                 <input type="text" name='price' placeholder='Price' required />
                 <input type="text" name='shortDescription' placeholder='Description' required />
                 <input type="number" name='quantity' placeholder='Quantity' required />
-                <input type="text" name='img' placeholder='Image Url' required />
+                <input type="text" name='image' placeholder='Image Url' required />
+                <input type="text" name='supplierName' placeholder='Supplier Name' required />
                 <input type="submit" className='input-btn' value="Upload" />
 
             </form>
