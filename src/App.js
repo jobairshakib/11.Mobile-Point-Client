@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddItem from './Components/AddItem/AddItem';
 import Blog from './Components/Blog/Blog';
+import Error from './Components/Error/Error';
 import Home from './Components/Home/Home';
 import Items from './Components/Items/Items';
 import Login from './Components/Login/Login';
@@ -43,6 +44,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<Error></Error>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
