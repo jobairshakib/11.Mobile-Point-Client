@@ -10,7 +10,21 @@ const AddItem = () => {
         const quantity = event.target.quantity.value;
         const img = event.target.img.value;
 
-        console.log(name,price,shortDescription,quantity,img);
+        const url = `http://localhost:5000/addItem`;
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                name, price, shortDescription, quantity, img
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                event.target.reset();
+            });
     }
     return (
         <div className='addItem-form'>
