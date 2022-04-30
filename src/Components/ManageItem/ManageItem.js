@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './ManageItem.css'
 
 const ManageItem = () => {
@@ -8,7 +9,8 @@ const ManageItem = () => {
 
     const [item, setItem] = useState({});
 
-    const [quantity, setQuantity] = useState(0);
+
+    const [quantity, setQuantity] = useState(30);
 
     useEffect(() => {
         fetch(`http://localhost:5000/item/${id}`)
@@ -17,16 +19,21 @@ const ManageItem = () => {
     }, [])
 
     const handleDeliver = () => {
-        setQuantity(quantity - 1);
+        setQuantity(prevQuantitiy => prevQuantitiy-1);
+        console.log(quantity);
     }
 
     const handleRestock = (event) => {
         event.preventDefault();
-
+  
         const restockItem = parseInt(event.target.restock.value);
-        console.log(restockItem);
-        setQuantity(quantity + restockItem);
-        event.target.reset();
+        if (isNaN(restockItem)) {
+            alert('Enter a Number');
+        }
+        else {
+            setQuantity(prevQuantitiy => prevQuantitiy + restockItem);
+            event.target.reset();
+        }
     }
 
     return (
