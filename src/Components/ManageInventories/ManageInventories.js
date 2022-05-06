@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import useItems from '../hooks/useItems';
 
 const ManageInventories = () => {
@@ -14,7 +13,8 @@ const ManageInventories = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                console.log(data);
+                    const remainingItem = items.filter(item => item._id !== id);
+                    setItems(remainingItem)
             })
         }
     }

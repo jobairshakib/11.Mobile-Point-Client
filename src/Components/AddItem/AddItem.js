@@ -1,11 +1,15 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
+import auth from '../../firebase.init';
 import './AddItem.css'
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
     const handleItem = (event) => {
         event.preventDefault();
         const name = event.target.name.value;
+        const email = user.email;
         const price = event.target.price.value;
         const shortDescription = event.target.shortDescription.value;
         const quantity = event.target.quantity.value;
@@ -16,7 +20,7 @@ const AddItem = () => {
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                name, price, shortDescription, quantity, image, supplierName
+                name, email, price, shortDescription, quantity, image, supplierName
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -34,9 +38,10 @@ const AddItem = () => {
             <h2 className='additem-title'>Add Item</h2>
             <form onSubmit={handleItem}>
                 <input type="text" name='name' placeholder='Name' required />
+                <input type="text" name='email' placeholder='Name' value={user.email} readOnly required />
                 <input type="text" name='price' placeholder='Price' required />
                 <input type="text" name='shortDescription' placeholder='Description' required />
-                <input type="number" name='quantity' placeholder='Quantity' required />
+                <input type="number" name='quantity' placeholder='Quantity' min={1} required />
                 <input type="text" name='image' placeholder='Image Url' required />
                 <input type="text" name='supplierName' placeholder='Supplier Name' required />
                 <input type="submit" className='input-btn' value="Upload" />

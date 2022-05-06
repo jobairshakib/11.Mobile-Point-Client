@@ -1,26 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import useItem from '../hooks/useItem';
 import './ManageItem.css'
 
 const ManageItem = () => {
     
     const { id } = useParams();
 
-    const [item, setItem] = useState({});
+    const [item, setItem] = useState();
 
+    const [quantity, setQuantity] = useState();
 
-    const [quantity, setQuantity] = useState(30);
 
     useEffect(() => {
         fetch(`http://localhost:5000/item/${id}`)
             .then(res => res.json())
             .then(data => setItem(data))
-    }, [])
+    }, [id])
 
     const handleDeliver = () => {
-        setQuantity(prevQuantitiy => prevQuantitiy-1);
-        console.log(quantity);
+        
+        if (quantity > 1) {
+            setQuantity(prevQuantitiy => prevQuantitiy - 1);
+        }
+        else
+            setQuantity("Sold Out");
+        
     }
 
     const handleRestock = (event) => {
