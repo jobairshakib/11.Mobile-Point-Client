@@ -19,7 +19,7 @@ const ManageItem = () => {
     }, [id])
 
     const handleDeliver = () => {
-        let remaining = parseInt(+inventory.quantity) - 1;
+        let remaining = parseInt(quantity) - 1;
         let newInventory = { name, email, price, shortDescription, quantity: remaining, image, supplierName };
         setInventory(newInventory);
 
@@ -37,7 +37,7 @@ const ManageItem = () => {
 
 const handleRestock = (event) => {
     event.preventDefault();
-    let remaining = parseInt(+inventory.quantity) + parseInt(event.target.restock.value);
+    let remaining = parseInt(quantity) + parseInt(event.target.restock.value);
     let newInventory = { name, email, price, shortDescription, quantity: remaining, image, supplierName };
     setInventory(newInventory);
 

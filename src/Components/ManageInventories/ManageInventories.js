@@ -2,6 +2,7 @@ import useItems from '../hooks/useItems';
 
 const ManageInventories = () => {
     const [items, setItems] = useItems();
+
     
     const handleDelete = id => {
         const confirm = window.confirm('Are you want to delete this item?');
@@ -26,6 +27,7 @@ const ManageInventories = () => {
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Update</th>
                         <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -36,6 +38,7 @@ const ManageInventories = () => {
                                 <tr>
                                     <td>{item.name}</td>
                                     <td>{item.price}</td>
+                                    <td><button className='btn btn-success'>Update</button></td>
                                     <td><button onClick={()=>handleDelete(item._id)} className='btn btn-danger'>Delete</button></td>
                                 </tr>
                             );

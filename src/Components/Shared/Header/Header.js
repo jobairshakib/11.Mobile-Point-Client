@@ -22,6 +22,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className='link-container'>
+                    <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/home'>Home</NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to='/blog'>Blog</NavLink>
                     {
                         user && <>
