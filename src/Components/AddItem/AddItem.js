@@ -9,7 +9,7 @@ const AddItem = () => {
     const handleItem = (event) => {
         event.preventDefault();
         const name = event.target.name.value;
-        const email = user.email;
+        const email = user?.email;
         const price = event.target.price.value;
         const shortDescription = event.target.shortDescription.value;
         const quantity = event.target.quantity.value;
@@ -38,7 +38,7 @@ const AddItem = () => {
             <h2 className='additem-title'>Add Item</h2>
             <form onSubmit={handleItem}>
                 <input type="text" name='name' placeholder='Name' required />
-                <input type="text" name='email' placeholder='Name' value={user.email} readOnly required />
+                <input type="text" name='email' placeholder='Name' value={user?.email} readOnly required />
                 <input type="text" name='price' placeholder='Price' required />
                 <input type="text" name='shortDescription' placeholder='Description' required />
                 <input type="number" name='quantity' placeholder='Quantity' min={1} required />

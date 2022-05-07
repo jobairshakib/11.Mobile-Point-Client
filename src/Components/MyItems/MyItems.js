@@ -6,7 +6,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
     const [items, setItems] = useState([]);
     useEffect(() => {
-        const email = user.email; 
+        const email = user?.email; 
         fetch(`http://localhost:5000/item?email=${email}`)
             .then(res => res.json())
             .then(data => setItems(data))
@@ -30,7 +30,7 @@ const MyItems = () => {
     }
 
     return (
-            <div className='p-5'>
+            <div className='p-5 vh-100'>
             <h1 className='text-center'>My Items:{items.length}</h1>
             <table className="table w-75 mx-auto  table-striped">
                 <thead>

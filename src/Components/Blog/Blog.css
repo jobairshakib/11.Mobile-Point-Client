@@ -1,6 +1,5 @@
 .blog-container {
     width: 90%;
-    height: 100vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

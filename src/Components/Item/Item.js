@@ -18,7 +18,7 @@ const Item = ({item}) => {
                 <h5>Price: {price}</h5>
                 <h5>Quantitiy: {quantity}</h5>
                 <h5>Supplier: {supplierName}</h5>
-                <small>{shortDescription}</small><br />
+                <small>{shortDescription.slice(0,100)}</small><br />
                 <button className='stock-btn' onClick={navigateToItem}>Stock Update</button>
             </div>
         </div>
