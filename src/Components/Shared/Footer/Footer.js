@@ -19,8 +19,6 @@ const Footer = () => {
 
                     <h6 className="hover-style" >Homepages</h6>
                     <h6 className="hover-style">About</h6>
-                    <h6 className="hover-style">Doctor</h6>
-                    <h6 className="hover-style">Department</h6>
                     <h6 className="hover-style">News</h6>
                     <h6 className="hover-style">Contact</h6>
 
@@ -29,7 +27,6 @@ const Footer = () => {
                     <h6 className="mb-4">Press</h6>
                     <h6 className="hover-style">Press Release</h6>
                     <h6 className="hover-style">Contact Us</h6>
-                    <h6 className="hover-style">Family Help</h6>
                 </div>
                 <div className="col-md-3 footer">
                     <h6 className="mb-4"> <FontAwesomeIcon className="text-primary" icon={faLocationDot} /> Address</h6>
