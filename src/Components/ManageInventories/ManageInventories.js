@@ -1,6 +1,6 @@
 import { faDeleteLeft, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useItems from '../hooks/useItems';
 
 const ManageInventories = () => {
@@ -53,6 +53,7 @@ const ManageInventories = () => {
                     }
                 </tbody>
             </table>
+            <Link className='text-decoration-none' to='/addItem'><button className='inventory-btn w-25' >Add Item</button></Link>
         </div>
     );
 };

@@ -55,7 +55,7 @@ const handleRestock = (event) => {
 
 return (
     <div>
-        <div className='item-container'>
+        <div className='item-container w-75 mx-auto mt-4'>
             <div className='item-img'>
                 <img src={image} alt="" />
             </div>
@@ -64,11 +64,11 @@ return (
             <h5>Quantitiy: {quantity}</h5>
             <h5>Supplier: {supplierName}</h5>
             <small>{shortDescription}</small><br />
-            <button className='w-50 input-btn p-2 my-2 mx-auto' onClick={handleDeliver}>Delivered</button>
-            <h2 className='text-bold text-center'>Restock Item</h2>
+            <button className='w-25 input-btn p-2 my-2' onClick={handleDeliver}>Delivered</button>
+            <h4 className='text-bold text-center'>Restock Item</h4>
             <form onSubmit={handleRestock}>
-                <input type="number" name='restock' placeholder='Enter the number of item to Re-Stock' />
-                <input type="submit" className='input-btn my-2 mx-auto' value='Restock' min={1}/>
+                <input className='w-25 mx-auto' type="number" name='restock' placeholder='Enter the number of item' min={1} />
+                <input type="submit" className='input-btn my-2 mx-auto w-25' value='Restock'/>
             </form>
         </div>
     </div>
