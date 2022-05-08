@@ -40,7 +40,6 @@ const MyItems = () => {
 
     return (
             <div className='p-5 vh-100'>
-            <h1 className='text-center'>My Items:{items.length}</h1>
             <table className="table w-75 mx-auto  table-striped">
                 <thead>
                     <tr>

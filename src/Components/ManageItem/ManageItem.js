@@ -67,7 +67,7 @@ return (
             <button className='w-25 input-btn p-2 my-2' onClick={handleDeliver}>Delivered</button>
             <h4 className='text-bold text-center'>Restock Item</h4>
             <form onSubmit={handleRestock}>
-                <input className='w-25 mx-auto' type="number" name='restock' placeholder='Enter the number of item' min={1} />
+                <input className='w-25 mx-auto' type="number" name='restock' placeholder='Enter the number of item' min={1} required/>
                 <input type="submit" className='input-btn my-2 mx-auto w-25' value='Restock'/>
             </form>
         </div>
