@@ -1,0 +1,11 @@
+.delivery-container{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #16a085;
+}
+.delivery-icon{
+    color: #16a085;
+}
+.delivery-title{
+    font-weight: 600;
+}

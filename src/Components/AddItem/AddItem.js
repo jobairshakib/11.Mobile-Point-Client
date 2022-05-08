@@ -16,7 +16,7 @@ const AddItem = () => {
         const image = event.target.image.value;
         const supplierName = event.target.supplierName.value;
 
-        const url = `http://localhost:5000/addItem`;
+        const url = `https://murmuring-temple-05921.herokuapp.com/addItem`;
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({

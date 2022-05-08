@@ -13,7 +13,7 @@ const ManageItem = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/item/${id}`)
+        fetch(`https://murmuring-temple-05921.herokuapp.com/item/${id}`)
             .then(res => res.json())
             .then(data => setInventory(data))
     }, [id])
@@ -24,7 +24,7 @@ const ManageItem = () => {
         setInventory(newInventory);
 
 
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://murmuring-temple-05921.herokuapp.com/item/${id}`, {
             method: 'PUT',
             body: JSON.stringify(newInventory),
             headers: {
@@ -42,7 +42,7 @@ const handleRestock = (event) => {
     setInventory(newInventory);
 
 
-    fetch(`http://localhost:5000/item/${id}`, {
+    fetch(`https://murmuring-temple-05921.herokuapp.com/item/${id}`, {
         method: 'PUT',
         body: JSON.stringify(newInventory),
         headers: {

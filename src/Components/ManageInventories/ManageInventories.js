@@ -15,7 +15,7 @@ const ManageInventories = () => {
         const confirm = window.confirm('Are you want to delete this item?');
 
         if (confirm) {
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://murmuring-temple-05921.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
