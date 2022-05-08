@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../Banner/Banner';
-import Contact from '../Contact/Contac';
+import Contact from '../Contact/Contact';
 import DeliveryInfo from '../DeliveryInfo/DeliveryInfo';
 import useItems from '../hooks/useItems';
 import Item from '../Item/Item';
