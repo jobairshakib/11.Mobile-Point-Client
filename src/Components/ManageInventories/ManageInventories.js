@@ -1,6 +1,7 @@
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import useItems from '../hooks/useItems';
 
 const ManageInventories = () => {
@@ -23,9 +24,10 @@ const ManageInventories = () => {
                 .then(data => {
                     const remainingItem = items.filter(item => item._id !== id);
                     setItems(remainingItem)
-            })
+                });
+            toast("Item Deleted Successfully");
         }
-    }
+    };
 
     return (
         <div className='p-5'>
@@ -42,9 +44,9 @@ const ManageInventories = () => {
                     {
                         items.map(item => { 
                             return (
-                                <tr>
-                                    <td>{item.name}</td>
-                                    <td>{item.price}</td>
+                                <tr key={item?._id}>
+                                    <td>{item?.name}</td>
+                                    <td>{item?.price}</td>
                                     <td><button onClick={() => handleUpdate(item._id)} className='btn btn-success'>Update <FontAwesomeIcon icon={faPen} /></button></td>
                                     <td><button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete <FontAwesomeIcon icon={faTrash} /></button></td>
                                 </tr>
@@ -54,6 +56,7 @@ const ManageInventories = () => {
                 </tbody>
             </table>
             <Link className='text-decoration-none' to='/addItem'><button className='inventory-btn w-25' >Add Item</button></Link>
+            <ToastContainer />
         </div>
     );
 };

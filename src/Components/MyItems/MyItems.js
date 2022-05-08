@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyItems = () => {
@@ -35,6 +36,7 @@ const MyItems = () => {
                     const remainingItem = items.filter(item => item._id !== id);
                     setItems(remainingItem)
                 })
+            toast("Item Deleted Successfully");
         }
     }
 
@@ -64,6 +66,7 @@ const MyItems = () => {
                     }
                 </tbody>
             </table>
+            <ToastContainer/>
         </div>
     );
 };
