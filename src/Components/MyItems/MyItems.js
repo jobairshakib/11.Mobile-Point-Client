@@ -1,5 +1,8 @@
+import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyItems = () => {
@@ -12,6 +15,12 @@ const MyItems = () => {
             .then(data => setItems(data))
     }, [user])
     
+
+    const navigate = useNavigate();
+
+    const handleUpdate = (id) => {
+        navigate(`/inventory/${id}`);
+    };
 
     const handleDelete = id => {
         const confirm = window.confirm('Are you want to delete this item?');
@@ -37,6 +46,7 @@ const MyItems = () => {
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Update</th>
                         <th scope="col">Delete</th>
                     </tr>
                 </thead>
@@ -47,7 +57,8 @@ const MyItems = () => {
                                 <tr>
                                     <td>{item.name}</td>
                                     <td>{item.price}</td>
-                                    <td><button onClick={()=>handleDelete(item._id)} className='btn btn-danger'>Delete</button></td>
+                                    <td><button onClick={() => handleUpdate(item._id)} className='btn btn-success'>Update <FontAwesomeIcon icon={faPen} /></button></td>
+                                    <td><button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete <FontAwesomeIcon icon={faTrash} /></button></td>
                                 </tr>
                             );
                         })

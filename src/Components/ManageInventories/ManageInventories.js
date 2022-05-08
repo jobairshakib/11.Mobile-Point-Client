@@ -1,3 +1,5 @@
+import { faDeleteLeft, faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 import useItems from '../hooks/useItems';
 
@@ -43,8 +45,8 @@ const ManageInventories = () => {
                                 <tr>
                                     <td>{item.name}</td>
                                     <td>{item.price}</td>
-                                    <td><button onClick={() => handleUpdate(item._id)} className='btn btn-success'>Update</button></td>
-                                    <td><button onClick={()=>handleDelete(item._id)} className='btn btn-danger'>Delete</button></td>
+                                    <td><button onClick={() => handleUpdate(item._id)} className='btn btn-success'>Update <FontAwesomeIcon icon={faPen} /></button></td>
+                                    <td><button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete <FontAwesomeIcon icon={faTrash} /></button></td>
                                 </tr>
                             );
                         })
